@@ -2,7 +2,11 @@
 * Can be minified and expanded.
 * Tested in Chrome, only. Pull requests welcome.
 
+***Expanded***
+
 ![Expaned](https://github.com/xErik/angularjs-watcher-count/raw/master/img/expanded.png)
+
+***Minimized***
 
 ![Minimized](https://github.com/xErik/angularjs-watcher-count/raw/master/img/minimized.png)
 
