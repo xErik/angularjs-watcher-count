@@ -1,4 +1,4 @@
-* Displays the AngularJS watcher count in the browser.
+* Displays the AngularJS watcher count in browser.
 * Can be minified and expanded.
 * Tested in Chrome, only. Pull requests welcome.
 
