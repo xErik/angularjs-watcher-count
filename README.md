@@ -1,6 +1,6 @@
 * Displays the AngularJS watcher count in browser.
 * Can be minified and expanded.
-* Tested in Chrome, only. Pull requests welcome.
+* Tested in Chrome and Firefox. Pull requests welcome.
 
 ***Expanded***
 
@@ -13,7 +13,7 @@
 # Installation
 
 ```
-npm install angularjs-watcher-count
+npm install angularjs-watcher-count --save-dev
 ```
 
 # Usage
