@@ -1,14 +1,10 @@
-* Displays the AngularJS watcher count in browser.
-* Can be minified and expanded.
+* Displays the AngularJS watcher count in browser, with details.
+* Gets expanded and minified by mouseover/mousout.
 * Tested in Chrome and Firefox. Pull requests welcome.
 
 ***Expanded***
 
 ![Expaned](https://github.com/xErik/angularjs-watcher-count/raw/master/img/expanded.png)
-
-***Minimized***
-
-![Minimized](https://github.com/xErik/angularjs-watcher-count/raw/master/img/minimized.png)
 
 # Installation
 
@@ -18,10 +14,14 @@ npm install angularjs-watcher-count --save-dev
 
 # Usage
 
-*app.js (or wherever)*
+*app.js (or wherever; or as browserify -r parameter)*
 ```
 require('angularjs-watcher-count');
 ```
+
+# TODO
+
+Mouseout-Events do not always hide the div.
 
 # Source
 

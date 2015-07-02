@@ -37,23 +37,22 @@ function getWatchers(root) {
 
 var id = 'refreshWatcherInfo_123asdaiu9';
 var minHeight = "30px";
-var minWidth = "260px";
+var minWidth = "130px";
 var maxHeight = "400px";
 var maxWidth = "600px";
 
-function toggle() {
+function toggle(doShow) {
 	var container = document.getElementById(id);
-	var height= container.style.height;
-	var width = container.style.width;
+	// var height= container.style.height;
+	// var width = container.style.width;
 
-	if(height === minHeight) {
+	if(doShow === true) {
 		container.style.height = maxHeight;
 		container.style.width = maxWidth;
 	} else {
 		container.style.height = minHeight;
 		container.style.width = minWidth;
 	}
-
 	refreshWatcherInfo();
 }
 
@@ -63,8 +62,7 @@ function refreshWatcherInfo() {
 
 	html = '<style>#wtccnt th, #wtccnt td{font-size:14px; color:yellow;text-align:left;border:1px gray solid;padding:2px;} button {width:125px;background-color:#00FF00;color:black;border:0px solid yellow;}</style>';
 	html += '<table id="wtccnt">';
-	html += '<tr><td colspan="2"><button id="btncnt">Count Watchers</button> <button id="btntoggle">Show / Hide</button></td></tr>';
-	html += '<tr><td>Count</td><td>Element</td></tr>';
+
 
 	var container = document.getElementById(id);
 	if (!container) {
@@ -96,19 +94,21 @@ function refreshWatcherInfo() {
 	arr.sort(function(a, b){return b[0]-a[0]});
 
 
-	for(var k = 0; k < arr.length; k++) {
+
+    html += ['<tr><th colspan="2"><b>Watchers: ',arr[0][0],'</b></th></tr>'].join('');
+    html += '<tr><td>Count</td><td>Element</td></tr>';
+	for(var k =0; k < arr.length; k++) {
 		var row = arr[k];
 		html += ['<tr><th><b>',row[0],'</b></th><td>', row[1].substring(0,200), '...</td></tr>'].join('');
 	}
 	html += '</table>';
 
 	container.innerHTML = html;
-
-	document.getElementById ("btncnt").addEventListener ("click", refreshWatcherInfo, false);
-	document.getElementById ("btntoggle").addEventListener ("click", toggle, false);
 }
-
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	refreshWatcherInfo();
+    document.getElementById(id).addEventListener('mouseover', function() { refreshWatcherInfo();  toggle(true); }, false);
+    document.getElementById(id).addEventListener('mouseout', function() { toggle(false); } , false);
+    window.addEventListener("hashchange", function() { setTimeout(function() {refreshWatcherInfo();}, 2500) }, false)
 });
