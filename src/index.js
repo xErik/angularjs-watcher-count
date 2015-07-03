@@ -60,7 +60,7 @@ function refreshWatcherInfo() {
 
 	var arr = [];
 
-	html = '<style>#wtccnt th, #wtccnt td{font-size:14px; color:yellow;text-align:left;border:1px gray solid;padding:2px;} #wtccnt th {white-space: nowrap;} #openClose {color:lightblue;text-decoration:underline;text-align:right;cursor: pointer;}</style>';
+	html = '<style>#wtccnt th, #wtccnt td{font-size:14px; color:yellow;text-align:left;border:1px gray solid;padding:2px;} #wtccnt th {white-space: nowrap;} #recount, #openClose {color:lightblue;text-decoration:underline;text-align:right;cursor: pointer;}</style>';
 	html += '<table id="wtccnt">';
 
 
@@ -93,7 +93,7 @@ function refreshWatcherInfo() {
 
 	arr.sort(function(a, b){return b[0]-a[0]});
 
-    html += ['<tr><th><b>Watchers: ',arr[0][0],'</b></th><th><span id="openClose">Toggle</span></th></tr>'].join('');
+    html += ['<tr><th><b>Watchers: ',arr[0][0],'</b></th><th><span id="recount">Recount</span> <span id="openClose">Toggle</span></th></tr>'].join('');
     html += '<tr><td>Count</td><td>Element</td></tr>';
 	for(var k =0; k < arr.length; k++) {
 		var row = arr[k];
@@ -104,6 +104,7 @@ function refreshWatcherInfo() {
 	container.innerHTML = html;
 
     document.getElementById('openClose').addEventListener('click', toggle, false);
+    document.getElementById('recount').addEventListener('click', refreshWatcherInfo, false);
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
