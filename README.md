@@ -19,10 +19,6 @@ npm install angularjs-watcher-count --save-dev
 require('angularjs-watcher-count');
 ```
 
-# TODO
-
-Mouseout-Events do not always hide the div.
-
 # Source
 
 [Idea and Source](https://gist.github.com/kentcdodds/31c90402750572107922#file-get-watchers-js)
