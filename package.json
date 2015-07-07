@@ -23,5 +23,5 @@
     "url": "https://github.com/xErik/angularjs-watcher-count/issues"
   },
   "homepage": "https://github.com/xErik/angularjs-watcher-count#readme",
-  publishConfig: {"registry":"'https://registry.npmjs.org/'}
+  "publishConfig": {"registry":"https://registry.npmjs.org/"}
 }
