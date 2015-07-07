@@ -1,6 +1,5 @@
 * Displays the AngularJS watcher count in browser, with details.
-* Gets expanded and minified by mouseover/mousout.
-* Tested in Chrome and Firefox. Pull requests welcome.
+* Tested with Chrome and Firefox. Pull requests welcome.
 
 ***Expanded***
 
@@ -26,6 +25,10 @@ require('angularjs-watcher-count');
 [NPM AngularJS Watcher Count](https://www.npmjs.com/package/angularjs-watcher-count)
 
 [GIT AngularJS Watcher Count](https://github.com/xErik/angularjs-watcher-count)
+
+# TODO
+
+Listen to AngularJS watcher-count-change-events.
 
 # License
 
